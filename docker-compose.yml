@@ -1,0 +1,32 @@
+# docker-compose up -d
+# docker-compose down
+services:
+
+  sqlserver:
+    image: fabrizionegron/sql-server:2022
+    container_name: universidad-sqlserver
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "Admin12345"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+
+  mysql:
+    image: mysql:8.0
+    container_name: universidad-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "Admin12345"
+      MYSQL_DATABASE: "universidad_mysql"
+      MYSQL_USER: "spark_user"
+      MYSQL_PASSWORD: "Spark12345"
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+
+volumes:
+  sqlserver_data:
+  mysql_data:
