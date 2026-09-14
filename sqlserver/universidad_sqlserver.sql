@@ -19,10 +19,12 @@ CREATE TABLE carreras (
 GO
 
 INSERT INTO carreras (nombre, facultad, universidad) VALUES
-    ('Ingeniería de Sistemas',  'Facultad de Ingeniería',    'Universidad Valle Grande'),
-    ('Ingeniería de Software',  'Facultad de Ingeniería',    'Universidad Valle Grande'),
-    ('Ingeniería de Redes',     'Facultad de Ingeniería',    'Universidad Valle Grande'),
-    ('Ingeniería Civil',        'Facultad de Ingeniería',    'Universidad Valle Grande');
+    ('Ingeniería de Sistemas',        'Facultad de Ingeniería',          'Universidad de Cañete'),
+    ('Ingeniería de Software',        'Facultad de Ingeniería',          'Universidad de Cañete'),
+    ('Ingeniería de Redes',           'Facultad de Ingeniería',          'Universidad de Cañete'),
+    ('Ingeniería Civil',              'Facultad de Ingeniería',          'Universidad de Cañete'),
+    ('Administración de Empresas',    'Facultad de Ciencias Empresariales', 'Universidad de Cañete'),
+    ('Contabilidad y Finanzas',       'Facultad de Ciencias Empresariales', 'Universidad de Cañete');
 GO
 
 SELECT * FROM carreras;
